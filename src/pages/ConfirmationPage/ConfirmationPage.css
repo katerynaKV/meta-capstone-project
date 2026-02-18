@@ -1,0 +1,59 @@
+.table-is-reserved {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #495e57;
+  max-width: auto;
+  height: 150px;
+}
+
+.table-is-reserved h2 {
+  display: flex;
+  font-size: 40px;
+  color: #f4ce14;
+  margin: 0;
+}
+
+.confirmation-content {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 0;
+}
+
+.confirmation-wrapper {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.confirmation-details {
+  flex: 1;
+}
+
+.confirmation-details h3 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.detail-container {
+  display: flex;
+  margin-bottom: 24px;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.confirmation-img {
+  flex: 1;
+}
+
+.confirmation-img img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.confirmation-done {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: auto;
+  text-decoration: none;
+}

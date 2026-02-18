@@ -1,0 +1,4 @@
+.Page {
+  min-height: 70vh;
+  /* min-height: calc(100vh - 104px - 384px); */
+}

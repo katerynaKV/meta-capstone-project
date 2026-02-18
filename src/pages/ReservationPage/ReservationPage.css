@@ -1,0 +1,51 @@
+.reservation-content {
+  padding: 32px 0 64px 0;
+}
+
+.reservation-content h2 {
+  font-size: 40px;
+  margin: 0 0 24px 0;
+  font-weight: 400;
+}
+
+.reservation-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.reservation-wrapper form {
+  flex: 1;
+  max-width: 400px;
+}
+
+.confirmatiom-page-button {
+  display: inline-flex;
+  text-decoration: none;
+  margin-top: 32px;
+}
+
+.reservation-img {
+  flex: 1;
+}
+
+.reservation-img img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.input-container label {
+  font-weight: bold;
+}
+
+.input-container input {
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 16px;
+}

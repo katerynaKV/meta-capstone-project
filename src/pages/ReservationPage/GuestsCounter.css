@@ -1,0 +1,20 @@
+.GuestsCounter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.counter-button {
+  display: inline-flex;
+  height: 40px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  padding: 0;
+}
+
+.counter-value {
+  font-size: 24px;
+  font-weight: bold;
+}

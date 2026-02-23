@@ -21,7 +21,9 @@ export function HomePage() {
               traditional recipes served with a modern twist.
             </p>
             <Link to="/reservation" className="reserve-table-button">
-              <Button>Reserve a Table</Button>
+              <Button aria-label="Navigate to table reservation page">
+                Reserve a Table
+              </Button>
             </Link>
           </div>
           <img className="hero-img" src="/hero-section-img.jpg" />
@@ -32,7 +34,9 @@ export function HomePage() {
         <div className="container announcement-content">
           <div className="announcement-heading">
             <h2 className="announcement">This weeks specials!</h2>
-            <Button onClick={linkAlert}>Online Menu</Button>
+            <Button aria-label="Navigate to menu page" onClick={linkAlert}>
+              Online Menu
+            </Button>
           </div>
 
           <div className="special-products">

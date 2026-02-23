@@ -2,9 +2,9 @@ import { Link } from "react-router";
 import { Button } from "../../components/Button/Button";
 import { Page } from "../../components/Page/Page";
 
-import "./ConfirmationPage.css";
+import "./ConfirmedBooking.css";
 
-export function ConfirmationPage() {
+export function ConfirmedBooking() {
   return (
     <Page>
       <div className="table-is-reserved">
@@ -48,7 +48,7 @@ export function ConfirmationPage() {
           </div>
         </div>
         <Link to="/" className="confirmation-done">
-          <Button>Back to home</Button>
+          <Button aria-label="Navigate to home page">Back to home</Button>
         </Link>
       </div>
     </Page>

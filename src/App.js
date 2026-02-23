@@ -3,8 +3,8 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { Route, Routes } from "react-router";
 import { HomePage } from "./pages/HomePage/HomePage";
-import { ReservationPage } from "./pages/ReservationPage/ReservationPage";
-import { ConfirmationPage } from "./pages/ConfirmationPage/ConfirmationPage";
+import { BookingPage } from "./pages/BookingPage/BookingPage";
+import { ConfirmedBooking } from "./pages/ConfirmedBooking/ConfirmedBooking";
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/reservation" element={<ReservationPage />} />
-        <Route path="/confirmation" element={<ConfirmationPage />} />
+        <Route path="/reservation" element={<BookingPage />} />
+        <Route path="/confirmation" element={<ConfirmedBooking />} />
       </Routes>
 
       <Footer />

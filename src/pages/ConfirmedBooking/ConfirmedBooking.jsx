@@ -1,3 +1,4 @@
+import { useLocation } from "react-router";
 import { Link } from "react-router";
 import { Button } from "../../components/Button/Button";
 import { Page } from "../../components/Page/Page";
@@ -5,6 +6,19 @@ import { Page } from "../../components/Page/Page";
 import "./ConfirmedBooking.css";
 
 export function ConfirmedBooking() {
+  const location = useLocation();
+  const bookingData = location.state;
+
+  if (!bookingData) {
+    return (
+      <Page>
+        <h1 className="no-reservation-found">
+          No reservation found. Please try again
+        </h1>
+      </Page>
+    );
+  }
+
   return (
     <Page>
       <div className="table-is-reserved">
@@ -17,29 +31,29 @@ export function ConfirmedBooking() {
             <h3>Reservation details</h3>
             <div className="detail-container">
               <b>Date:</b>
-              <span>23.02.2026</span>
+              <span>{bookingData.date}</span>
             </div>
 
             <div className="detail-container">
               <b>Time:</b>
-              <span>18:00</span>
+              <span>{bookingData.time}</span>
             </div>
 
             <div className="detail-container">
               <b>Number of guests:</b>
-              <span>3</span>
+              <span>{bookingData.numGuests}</span>
             </div>
             <div className="detail-container">
               <b>Name:</b>
-              <span>John Doe</span>
+              <span>{bookingData.name}</span>
             </div>
             <div className="detail-container">
               <b>Phone number:</b>
-              <span>556622448</span>
+              <span>{bookingData.phoneNumber}</span>
             </div>
             <div className="detail-container">
               <b>Email:</b>
-              <span>shos.tam@example.com</span>
+              <span>{bookingData.email}</span>
             </div>
           </div>
 

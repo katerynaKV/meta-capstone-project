@@ -57,3 +57,10 @@
   margin-bottom: auto;
   text-decoration: none;
 }
+
+.no-reservation-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+}

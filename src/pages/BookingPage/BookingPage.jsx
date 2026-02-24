@@ -1,21 +1,9 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import { Page } from "../../components/Page/Page";
 import { BookingForm } from "./BookingForm";
 import "./BookingPage.css";
 import { fetchAPI, submitAPI } from "../../api";
 import { useNavigate } from "react-router";
-
-const initialAvailableTimes = [
-  "",
-  "15:00",
-  "16:00",
-  "17:00",
-  "18:00",
-  "19:00",
-  "20:00",
-  "21:00",
-  "22:00",
-];
 
 export const updateTimes = (state, date) => {
   return fetchAPI(new Date(date));
@@ -34,12 +22,12 @@ export function BookingPage() {
   const navigate = useNavigate();
 
   const submitForm = (formData) => {
-    console.log(formData);
-
-    const isSuccess = submitAPI(formData);
-    if (isSuccess) {
-      console.log("We will navigate now!");
-      navigate("/confirmation");
+    const success = submitAPI(formData);
+    if (success) {
+      navigate("/confirmation", { state: formData });
+      console.log("Navigation trigger with data:", formData);
+    } else {
+      console.log("Submission failed according to API");
     }
   };
 

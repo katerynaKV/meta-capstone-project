@@ -11,15 +11,13 @@ code {
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  width: 100%;
-}
-
 :root {
   --font-heading: "Markazi Text", serif;
   --font-body: "Karla", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -39,4 +37,16 @@ h6 {
 
 p {
   line-height: 1.3;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
 }

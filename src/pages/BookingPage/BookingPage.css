@@ -1,5 +1,6 @@
 .reservation-content {
-  padding: 32px 0 64px 0;
+  padding-top: 32px;
+  padding-bottom: 64px;
 }
 
 .reservation-content h2 {
@@ -20,4 +21,10 @@
 .reservation-img img {
   width: 100%;
   border-radius: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .reservation-wrapper {
+    flex-direction: column;
+  }
 }

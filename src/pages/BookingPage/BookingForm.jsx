@@ -3,6 +3,9 @@ import { Button } from "../../components/Button/Button";
 import { GuestsCounter } from "./GuestsCounter";
 import { useFormik } from "formik";
 
+/**
+ * Checks all form values and accumulates errors for incorrect fields.
+ */
 export function validateForm(values) {
   const errors = {};
 
@@ -57,6 +60,7 @@ export function BookingForm({
       },
     });
 
+  // When changing the date, we should reset selected time
   const handleDateChange = (event) => {
     const newDate = event.target.value;
 
@@ -65,12 +69,15 @@ export function BookingForm({
     setFieldValue("time", "");
   };
 
+  // Limit values used for number of guests
   const handleNumGuestsChange = (newValue) => {
     if (newValue >= 1 && newValue <= 15) {
       setFieldValue("numGuests", newValue);
     }
   };
 
+  // Compute the correct date format for date input's `min` prop
+  // Calendar should not allow reservations in the past
   const dateTime = new Date().toISOString();
   const today = dateTime.slice(0, 10);
 

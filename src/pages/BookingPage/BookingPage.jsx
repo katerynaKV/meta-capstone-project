@@ -24,6 +24,7 @@ export function BookingPage() {
   const submitForm = (formData) => {
     const success = submitAPI(formData);
     if (success) {
+      // Navigate to the confirmation page passing it reservation details
       navigate("/confirmation", { state: formData });
       console.log("Navigation trigger with data:", formData);
     } else {

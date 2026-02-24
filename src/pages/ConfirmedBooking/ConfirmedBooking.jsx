@@ -6,6 +6,7 @@ import { Page } from "../../components/Page/Page";
 import "./ConfirmedBooking.css";
 
 export function ConfirmedBooking() {
+  // Booking data will exist when user navigated from the booking page form submission
   const location = useLocation();
   const bookingData = location.state;
 
